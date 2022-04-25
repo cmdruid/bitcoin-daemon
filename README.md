@@ -30,9 +30,9 @@ This folder is for storing pruned snapshots of the bitcoin blockchain. If your c
 You can find snapshots of the blockchain located here:
 https://prunednode.today
 
-If you have an existing blockchain, you must remove it first in order for a snapshot to be used. You can perform this by running `docker volume rm bitcoind-daemon-data` to remove the existing data volume, or `docker exec -it bitcoind-simple` to gain shell access (then remove all files located in the `/data/bitcoin` directory).
-
 If you plan to use a pruned snapshot of the blockchain, make sure to uncomment the `prune` option in `config/bitcoin.conf`.
+
+If you have an existing blockchain, you must remove it first in order for a snapshot to be used. You can perform this by deleting the existing `bitcoin-daemon-data` volume, or log into the container using `docker exec -it bitcoin-data` and remove all files located in the `/data/bitcoin` directory.
 
 ## Contribution
 
